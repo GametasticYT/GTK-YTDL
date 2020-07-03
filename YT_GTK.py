@@ -37,7 +37,9 @@ class MainWin(Gtk.Window):
         for x in range(5):
             print("Fertig!")
 
+
 win = MainWin()
+win.init_ui()
 win.connect("destroy", Gtk.main_quit)
 win.show_all()
 Gtk.main()
