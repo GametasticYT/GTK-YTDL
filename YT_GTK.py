@@ -6,20 +6,20 @@ from gi.repository import Gtk
 
 class MainWin(Gtk.Window):
     def init_ui(self):
-        self.set_default_size(500, 500)
+        self.set_default_size(500, 100)
     def __init__(self):
-        Gtk.Window.__init__(self, title="Hello Nigang")
+        Gtk.Window.__init__(self, title="Youtube-dl Wrapper")
         
-        self.helloWorldBox = Gtk.Box(spacing=6)
-        self.add(self.helloWorldBox)
-
+        self.MP3box = Gtk.Box(spacing=6)
+        self.add(self.MP3box)
+        
         self.btn1 = Gtk.Button(label="MP3")
         self.btn1.connect("clicked", self.MP3DL)
-        self.helloWorldBox.pack_start(self.btn1, True, True, 0)
+        self.MP3box.pack_start(self.btn1, True, True, 0)
 
         self.btn2 = Gtk.Button(label="MP4")
         self.btn2.connect("clicked", self.MP4DL)
-        self.helloWorldBox.pack_start(self.btn2, True, True, 0)
+        self.MP3box.pack_start(self.btn2, True, True, 0)
 
 
     def MP3DL(self, widget):
